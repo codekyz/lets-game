@@ -1,26 +1,55 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="app">
+  <LetsHeader></LetsHeader>
+  <LetsList></LetsList>
+  <LetsInput></LetsInput>
+  <LetsFooter></LetsFooter>
+</div>
+  
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LetsHeader from './components/LetsHeader'
+import LetsList from './components/LetsList'
+import LetsInput from './components/LetsInput'
+import LetsFooter from './components/LetsFooter'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    LetsHeader,
+    LetsList,
+    LetsInput,
+    LetsFooter,
   }
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+body {
+  background-color: #e7e7e7;
+  font-family: 'GmarketSansMedium';
 }
+
+button {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  background-color: #F29991;
+  color: #FFF;
+  font-family: 'GmarketSansMedium';
+  cursor: pointer;
+}
+
+input {
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-family: 'GmarketSansMedium';
+}
+
+.shadow {
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 15%);
+}
+
 </style>
