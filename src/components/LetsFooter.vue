@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="footer">
       김윤정 만듦
       codekyz
   </div>
@@ -12,5 +12,8 @@ export default {
 </script>
 
 <style>
+.footer {
+  margin: 30px 30px;
+}
 
 </style>

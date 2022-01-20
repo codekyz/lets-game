@@ -5,14 +5,18 @@
           게임 언제할래?
       </h1>
 
-      <button class="clear_btn">clearAll</button>
+      <button class="clear_btn" v-on:click="clear">clearAll</button>
 
   </header>
 </template>
 
 <script>
 export default {
-
+    methods: {
+        clear: function() {
+            this.$emit('clear');
+        }
+    }
 }
 </script>
 

@@ -1,8 +1,16 @@
 <template>
 <div id="app">
-  <LetsHeader></LetsHeader>
-  <LetsList></LetsList>
-  <LetsInput></LetsInput>
+  <LetsHeader v-on:clear="clearAll"></LetsHeader>
+
+  <LetsList 
+    v-bind:monUserList="monUser" :tueUserList="tueUser"
+    :wedUserList="wedUser" :thuUserList="thuUser"
+    :friUserList="friUser" :satUserList="satUser"
+    :sunUserList="sunUser"></LetsList>
+
+  <LetsInput 
+    v-on:addSchedule="addUserSchedule"></LetsInput>
+
   <LetsFooter></LetsFooter>
 </div>
   
@@ -16,6 +24,67 @@ import LetsInput from './components/LetsInput'
 import LetsFooter from './components/LetsFooter'
 
 export default {
+  data: function() {
+    return {
+      monUser: [],
+      tueUser: [],
+      wedUser: [],
+      thuUser: [],
+      friUser: [],
+      satUser: [],
+      sunUser: []
+    }
+  },
+
+  methods: {
+    addUserSchedule: function(userName, yoilList) {
+      for (var i = 0; i < yoilList.length; i++) {     
+        if (yoilList[i].checked && yoilList[i].yoil == '월') {
+          this.monUser.push(userName);
+        }
+        if (yoilList[i].checked && yoilList[i].yoil == '화') {
+          this.tueUser.push(userName);
+        }
+        if (yoilList[i].checked && yoilList[i].yoil == '수') {
+          this.wedUser.push(userName);
+        }
+        if (yoilList[i].checked && yoilList[i].yoil == '목') {
+          this.thuUser.push(userName);
+        }
+        if (yoilList[i].checked && yoilList[i].yoil == '금') {
+          this.friUser.push(userName);
+        }
+        if (yoilList[i].checked && yoilList[i].yoil == '토') {
+          this.satUser.push(userName);
+        }
+        if (yoilList[i].checked && yoilList[i].yoil == '일') {
+          this.sunUser.push(userName);
+        }
+      }
+    },
+
+    clearAll: function() {
+      this.monUser = [];
+      this.tueUser = [];
+      this.wedUser = [];
+      this.thuUser = [];
+      this.friUser = [];
+      this.satUser = [];
+      this.sunUser = [];
+    }
+  },
+
+  created: function() {
+    this.monUser.push('-');
+    this.tueUser.push('-');
+    this.wedUser.push('-');
+    this.thuUser.push('-');
+    this.friUser.push('-');
+    this.satUser.push('-');
+    this.sunUser.push('-');
+
+  },
+
   components: {
     LetsHeader,
     LetsList,
@@ -29,6 +98,7 @@ export default {
 <style>
 
 body {
+  margin: 0;
   background-color: #e7e7e7;
   font-family: 'GmarketSansMedium';
 }
