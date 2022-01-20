@@ -75,13 +75,13 @@ export default {
   },
 
   created: function() {
-    this.monUser.push('-');
-    this.tueUser.push('-');
-    this.wedUser.push('-');
-    this.thuUser.push('-');
-    this.friUser.push('-');
-    this.satUser.push('-');
-    this.sunUser.push('-');
+    // this.monUser.push('-');
+    // this.tueUser.push('-');
+    // this.wedUser.push('-');
+    // this.thuUser.push('-');
+    // this.friUser.push('-');
+    // this.satUser.push('-');
+    // this.sunUser.push('-');
 
   },
 

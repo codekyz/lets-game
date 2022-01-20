@@ -1,56 +1,56 @@
 <template>
   <section class="list">
     <ul class="listHeader">
-      <li>월</li>
-      <li>화</li>
-      <li>수</li>
-      <li>목</li>
-      <li>금</li>
-      <li>토</li>
-      <li>일</li>
+      <li>월요일</li>
+      <li>화요일</li>
+      <li>수요일</li>
+      <li>목요일</li>
+      <li>금요일</li>
+      <li>토요일</li>
+      <li>일요일</li>
     </ul>
 
     <div class="listUser">
       <ul>
         <li v-for="user in monUserList"
           v-bind:key="user">
-          {{ user ? user : no }}
+          {{ user }}
         </li>
       </ul>
       <ul>
         <li v-for="user in tueUserList"
           v-bind:key="user">
-          {{ user ? user : no }}
+          {{ user }}
         </li>
       </ul>
       <ul>
         <li v-for="user in wedUserList"
           v-bind:key="user">
-          {{ user ? user : no }}
+          {{ user }}
         </li>
       </ul>
       <ul>
         <li v-for="user in thuUserList"
           v-bind:key="user">
-          {{ user ? user : no }}
+          {{ user }}
         </li>
       </ul>
       <ul>
         <li v-for="user in friUserList"
           v-bind:key="user">
-          {{ user ? user : no }}
+          {{ user }}
         </li>
       </ul>
       <ul>
         <li v-for="user in satUserList"
           v-bind:key="user">
-          {{ user ? user : no }}
+          {{ user }}
         </li>
       </ul>
       <ul>
         <li v-for="user in sunUserList"
           v-bind:key="user">
-          {{ user ? user : no }}
+          {{ user }}
         </li>
       </ul>
     </div>
@@ -85,26 +85,25 @@ ul {
 
 .listHeader {
   display: flex;
-  justify-content: space-between;
-  margin-left: 30px;
-  margin-right: 30px;
 }
 
 .listHeader li {
+  flex: 1 1 0;
   padding: 10px 20px;
   background-color: #D9D8D7;
+  box-sizing: border-box;
 }
 
 .listUser {
   display: flex;
-  justify-content: space-between;
-  margin-left: 30px;
-  margin-right: 30px;
 }
 
-.listUser ul li {
+
+.listUser ul {
+  flex: 1 1 0;
   padding: 10px 20px;
   background-color: #F29991;
+  box-sizing: border-box;
 }
 
 </style>
