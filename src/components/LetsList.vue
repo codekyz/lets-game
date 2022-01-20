@@ -88,6 +88,7 @@ ul {
 }
 
 .listHeader li {
+  text-align: center;
   flex: 1 1 0;
   padding: 10px 20px;
   background-color: #D9D8D7;
@@ -100,6 +101,7 @@ ul {
 
 
 .listUser ul {
+  text-align: center;
   flex: 1 1 0;
   padding: 10px 20px;
   background-color: #F29991;
