@@ -13,7 +13,7 @@
 <script>
 export default {
     methods: {
-        clear: function() {
+        clear() {
             this.$emit('clear');
         }
     }

@@ -62,11 +62,6 @@ export default {
   props: ['monUserList', 'tueUserList', 'wedUserList', 'thuUserList', 
   'friUserList', 'satUserList', 'sunUserList'],
 
-  data: function() {
-    return {
-      no : '0'
-    }
-  }
 }
 </script>
 

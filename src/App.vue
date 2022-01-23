@@ -24,7 +24,7 @@ import LetsInput from './components/LetsInput'
 import LetsFooter from './components/LetsFooter'
 
 export default {
-  data: function() {
+  data: () => {
     return {
       monUser: [],
       tueUser: [],
@@ -37,8 +37,8 @@ export default {
   },
 
   methods: {
-    addUserSchedule: function(userName, yoilList) {
-      for (var i = 0; i < yoilList.length; i++) {     
+    addUserSchedule(userName, yoilList) {
+      for (let i = 0; i < yoilList.length; i++) {     
         if (yoilList[i].checked && yoilList[i].yoil == '월') {
           this.monUser.push(userName);
         }
@@ -63,7 +63,7 @@ export default {
       }
     },
 
-    clearAll: function() {
+    clearAll() {
       this.monUser = [];
       this.tueUser = [];
       this.wedUser = [];
@@ -72,17 +72,6 @@ export default {
       this.satUser = [];
       this.sunUser = [];
     }
-  },
-
-  created: function() {
-    // this.monUser.push('-');
-    // this.tueUser.push('-');
-    // this.wedUser.push('-');
-    // this.thuUser.push('-');
-    // this.friUser.push('-');
-    // this.satUser.push('-');
-    // this.sunUser.push('-');
-
   },
 
   components: {

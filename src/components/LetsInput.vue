@@ -19,7 +19,7 @@
 
 <script>
 export default {
-    data: function() {
+    data() {
         return {
             yoilList : [ {yoil:'월', checked:false},
                 {yoil:'화', checked:false},
@@ -28,21 +28,22 @@ export default {
                 {yoil:'금', checked:false},
                 {yoil:'토', checked:false},
                 {yoil:'일', checked:false}, ],
+                
             userName: ''
         }
     },
     methods: {
-        addSchedule: function(userName, yoilList) {
+        addSchedule(userName, yoilList) {
             if(this.userName !== '') {
                 this.$emit('addSchedule', userName, yoilList);
                 this.clearInput();
             }
         },
 
-        clearInput: function() {
+        clearInput() {
             this.userName = '';
         },
-        toggleYoil: function(yoilItem) {
+        toggleYoil(yoilItem) {
             yoilItem.checked = !yoilItem.checked;
         }
     }
